@@ -45,7 +45,6 @@ jems.transformLink = function(content){
             var _arguments = arguments;
 
             clearTimeout(timer);
-
             timer = setTimeout(function(){
 
                 fn.apply(_this, _arguments);
