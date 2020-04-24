@@ -93,8 +93,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="../templates/template.html" />
     
-    <link rel="prev" href="01.html" />
+    
+    <link rel="prev" href="../configs/config.html" />
     
 
     </head>
@@ -145,9 +147,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="01.html">
+        <li class="chapter " data-level="2.1" data-path="../configs/config.html">
             
-                <a href="01.html">
+                <a href="../configs/config.html">
             
                     
                         <b>2.1.</b>
@@ -160,18 +162,90 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2" data-path="02.html">
+
+    
+        
+        <li class="header">方法</li>
+        
+        
+    
+        <li class="chapter active" data-level="3.1" data-path="method.html">
             
-                <a href="02.html">
+                <a href="method.html">
             
                     
-                        <b>2.2.</b>
+                        <b>3.1.</b>
                     
                     常用方法
             
                 </a>
             
 
+            
+        </li>
+    
+
+    
+        
+        <li class="header">模板</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../templates/template.html">
+            
+                <a href="../templates/template.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    常用模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">模块</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../modules/module.html">
+            
+                <a href="../modules/module.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    常用模块
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../modules/pop.html">
+            
+                <a href="../modules/pop.html">
+            
+                    
+                        <b>5.1.1.</b>
+                    
+                    弹框
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -230,6 +304,7 @@
     <span class="token keyword">var</span> reg <span class="token operator">=</span> <span class="token regex">/==(\S*)==/g</span><span class="token punctuation">;</span>
 
     <span class="token keyword">var</span> originData <span class="token operator">=</span> content<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>reg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
     <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>originData<span class="token punctuation">)</span><span class="token punctuation">{</span>
 
         originData <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -247,8 +322,29 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<footer class="page-footer"><span class="copyright">@jordan, powered by Gitbook</span><span class="footer-modification">The document reversion time: 
-2020-04-22 16:39:31
+<h3 id="jemsdebounce">jems.debounce</h3>
+<blockquote>
+<p>&#x51FD;&#x6570;&#x9632;&#x6296;&#xFF0C;&#x4FDD;&#x8BC1;&#x5728;&#x9632;&#x6296;&#x671F;&#x95F4;&#xFF0C;&#x76EE;&#x6807;&#x51FD;&#x6570;&#x53EA;&#x6267;&#x884C;&#x4E00;&#x6B21;</p>
+</blockquote>
+<pre class="language-"><code>    jems.debounce = function(fn, await){
+
+        var timer = null;
+
+        return function(){
+
+            var _this = this;
+            var _arguments = arguments;
+
+            clearTimeout(timer);
+
+            timer = setTimeout(function(){
+
+                fn.apply(_this, _arguments);
+            }, await)
+        }
+    }
+</code></pre><footer class="page-footer"><span class="copyright">@jordan, powered by Gitbook</span><span class="footer-modification">The document reversion time: 
+2020-04-24 16:05:42
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -277,10 +373,14 @@
 
             
                 
-                <a href="01.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 常用字段">
+                <a href="../configs/config.html" class="navigation navigation-prev " aria-label="Previous page: 常用字段">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="../templates/template.html" class="navigation navigation-next " aria-label="Next page: 常用模板">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -289,7 +389,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"常用方法","level":"2.2","depth":1,"previous":{"title":"常用字段","level":"2.1","depth":1,"path":"first/01.md","ref":"first/01.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","include-codeblock","back-to-top-button","chapter-fold","simple-page-toc","page-toc-button","auto-scroll-table","popup","splitter","hide-element","code","-lunr","-search","search-pro","-livereload","prism","-highlight","local-pagefooter","pageview-count","alerts","include-csv","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"include-csv":{},"simple-page-toc":{"maxDepth":4,"skipFirstH1":true},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"local-pagefooter":{"copyright":"jordan","islocal":true,"modify_label":"The document reversion time: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"page-toc-button":{},"back-to-top-button":{},"pageview-count":{},"alerts":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"jordan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"开发文档","gitbook":"*"},"file":{"path":"first/02.md","mtime":"2020-04-22T08:39:31.249Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-22T08:42:55.230Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"常用方法","level":"3.1","depth":1,"next":{"title":"常用模板","level":"4.1","depth":1,"path":"templates/template.md","ref":"templates/template.md","articles":[]},"previous":{"title":"常用字段","level":"2.1","depth":1,"path":"configs/config.md","ref":"configs/config.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","include-codeblock","back-to-top-button","chapter-fold","simple-page-toc","page-toc-button","auto-scroll-table","popup","splitter","hide-element","code","-lunr","-search","search-pro","-livereload","prism","-highlight","local-pagefooter","pageview-count","alerts","include-csv"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"include-csv":{},"simple-page-toc":{"maxDepth":4,"skipFirstH1":true},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"local-pagefooter":{"copyright":"jordan","islocal":true,"modify_label":"The document reversion time: ","modify_format":"YYYY-MM-DD HH:mm:ss"},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"page-toc-button":{},"back-to-top-button":{},"pageview-count":{},"alerts":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"jordan","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"开发文档","gitbook":"*"},"file":{"path":"methods/method.md","mtime":"2020-04-24T08:05:42.881Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-24T08:13:34.625Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

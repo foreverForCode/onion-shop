@@ -30,4 +30,26 @@ jems.transformLink = function(content){
 }
 ```
 
+### jems.debounce
 
+> 函数防抖，保证在防抖期间，目标函数只执行一次
+
+```
+    jems.debounce = function(fn, await){
+
+        var timer = null;
+
+        return function(){
+
+            var _this = this;
+            var _arguments = arguments;
+
+            clearTimeout(timer);
+
+            timer = setTimeout(function(){
+
+                fn.apply(_this, _arguments);
+            }, await)
+        }
+    }
+```
