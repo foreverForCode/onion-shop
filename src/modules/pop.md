@@ -25,4 +25,21 @@ var idx = mBox.open({
 
 ```
 
+```
+var Waits = mBox.open({
+    boxtype: 3,
+    conStyle: 'text-align:center;',
+    maskColor: "rgba(0,0,0,0.3)",
+    time: 0,
+    content: '<div class="sodLoadingIcon"></div><p style="line-height:20px; margin-top:12px">努力提交订单中（<span class="countDown">5</span>s）</p>',
+    success: function () {
+        
+    }})
+```
+
+
+
+
+
+
 
