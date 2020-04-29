@@ -25,6 +25,7 @@ var idx = mBox.open({
 
 ```
 
+### 不同形态的弹框
 ```
 var Waits = mBox.open({
     boxtype: 3,
