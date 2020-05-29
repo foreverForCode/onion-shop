@@ -49,7 +49,7 @@
     <span>发票单号：</span>
     <span id="clipboardText"><%= data.id %></span>
 </div>
-            <span class="copy f12 g6 ml12 lh100 btn clipboard" onclick="jems.copy()">复制</span>
+<span class="copy f12 g6 ml12 lh100 btn clipboard" onclick="jems.copy()">复制</span>
 ```
 
 
