@@ -36,9 +36,7 @@ jems.transformLink = function(content){
 
 ```
     jems.debounce = function(fn, await){
-
         var timer = null;
-
         return function(){
 
             var _this = this;
