@@ -17,4 +17,5 @@
 * [常用模块](modules/module.md)
   * [弹框](modules/pop.md)
   * [复制](modules/copy.md)
+  * [神策API](modules/神策.md)
 
